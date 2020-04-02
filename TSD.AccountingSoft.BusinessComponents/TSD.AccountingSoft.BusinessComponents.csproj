@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9C3E053-C122-4CA8-B6EA-821A2F1981B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSD.AccountingSoft.BusinessComponents</RootNamespace>
+    <AssemblyName>TSD.AccountingSoft.BusinessComponents</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Facade\Cash\AccountBalanceFacade.cs" />
+    <Compile Include="Facade\Cash\CashFacade.cs" />
+    <Compile Include="Facade\Cash\GeneralLedgerFacade.cs" />
+    <Compile Include="Facade\CommonFacade.cs" />
+    <Compile Include="Facade\Deposit\DepositFacade.cs" />
+    <Compile Include="Facade\Dictionary\AccountCategoryFacade.cs" />
+    <Compile Include="Facade\Dictionary\AccountFacade.cs" />
+    <Compile Include="Facade\Dictionary\AccountingObjectCategoryFacade.cs" />
+    <Compile Include="Facade\Dictionary\AccountingObjectFacade.cs" />
+    <Compile Include="Facade\Dictionary\AccountTranferFacade.cs" />
+    <Compile Include="Facade\Dictionary\ActivityFacade.cs" />
+    <Compile Include="Facade\Dictionary\AudittingLogFacade.cs" />
+    <Compile Include="Facade\Dictionary\AutoBusinessFacade.cs" />
+    <Compile Include="Facade\Dictionary\AutoBusinessParallelFacade.cs" />
+    <Compile Include="Facade\Dictionary\AutoNumberListFacade.cs" />
+    <Compile Include="Facade\Dictionary\ExchangeRateFacade.cs" />
+    <Compile Include="Facade\Dictionary\MutualFacade.cs" />
+    <Compile Include="Facade\Dictionary\CalculateClosingFacade.cs" />
+    <Compile Include="Facade\Dictionary\AutoNumberFacade.cs" />
+    <Compile Include="Facade\Dictionary\BankFacade.cs" />
+    <Compile Include="Facade\Dictionary\BudgetCategoryFacade.cs" />
+    <Compile Include="Facade\Dictionary\BudgetChapterFacade.cs" />
+    <Compile Include="Facade\Dictionary\BudgetItemFacade.cs" />
+    <Compile Include="Facade\Dictionary\BudgetSourceCategoryFacade.cs" />
+    <Compile Include="Facade\Dictionary\BudgetSourceFacade.cs" />
+    <Compile Include="Facade\Dictionary\BuildingFacade.cs" />
+    <Compile Include="Facade\Dictionary\CapitalAllocateFacade.cs" />
+    <Compile Include="Facade\Dictionary\CompanyProfileFacade.cs" />
+    <Compile Include="Facade\Dictionary\CurrencyFacade.cs" />
+    <Compile Include="Facade\Dictionary\CustomerFacade.cs" />
+    <Compile Include="Facade\Dictionary\DBOptionFacade.cs" />
+    <Compile Include="Facade\Dictionary\DepartmentFacade.cs" />
+    <Compile Include="Facade\Dictionary\EmployeeFacade.cs" />
+    <Compile Include="Facade\Dictionary\EmployeeLeasingFacade.cs" />
+    <Compile Include="Facade\Dictionary\FixedAssetCategoryFacade.cs" />
+    <Compile Include="Facade\Dictionary\FixedAssetFacade.cs" />
+    <Compile Include="Facade\Dictionary\InventoryItemFacade.cs" />
+    <Compile Include="Facade\Dictionary\MergerFundFacade.cs" />
+    <Compile Include="Facade\Dictionary\PlanTemplateItemFacade.cs" />
+    <Compile Include="Facade\Dictionary\PlanTemplateListFacade.cs" />
+    <Compile Include="Facade\Dictionary\ProjectFacade.cs" />
+    <Compile Include="Facade\Dictionary\RefTypeFacade.cs" />
+    <Compile Include="Facade\Dictionary\ElectricalWorkFacade.cs" />
+    <Compile Include="Facade\Dictionary\StockFacade.cs" />
+    <Compile Include="Facade\Dictionary\VoucherListFacade.cs" />
+    <Compile Include="Facade\Estimate\EstimateFacade.cs" />
+    <Compile Include="Facade\FixedAsset\FAArmortizationFacade.cs" />
+    <Compile Include="Facade\FixedAsset\FADecrementFacade.cs" />
+    <Compile Include="Facade\FixedAsset\FAIncrementFacade.cs" />
+    <Compile Include="Facade\FixedAsset\FixedAssetLedgerFacade.cs" />
+    <Compile Include="Facade\FixedAsset\FixedAssetVoucherFacade.cs" />
+    <Compile Include="Facade\General\CaptitalAllocateVoucherFacade.cs" />
+    <Compile Include="Facade\General\AccountTranferVoucherFacade.cs" />
+    <Compile Include="Facade\General\GeneralFacade.cs" />
+    <Compile Include="Facade\Inventory\InventoryFacade.cs" />
+    <Compile Include="Facade\JournalEntryAccountFacade.cs" />
+    <Compile Include="Facade\Opening\OpeningInventoryEntryFacade.cs" />
+    <Compile Include="Facade\Opening\OpeningAccountEntryDetailFacade.cs" />
+    <Compile Include="Facade\Opening\OpeningAccountEntryFacade.cs" />
+    <Compile Include="Facade\Opening\OpeningFixedAssetEntryFacade.cs" />
+    <Compile Include="Facade\Opening\OpeningSupplyEntryFacade.cs" />
+    <Compile Include="Facade\Report\FixedAssetHousingReportFacade.cs" />
+    <Compile Include="Facade\Report\ReportDataTemplateFacade.cs" />
+    <Compile Include="Facade\Report\ReportGroupFacade.cs" />
+    <Compile Include="Facade\Report\ReportListFacade.cs" />
+    <Compile Include="Facade\Salary\SalaryFacade.cs" />
+    <Compile Include="Facade\Dictionary\VoucherTypeFacade.cs" />
+    <Compile Include="Facade\Salary\SalaryVoucherFacade.cs" />
+    <Compile Include="Facade\Search\SearchFacade.cs" />
+    <Compile Include="Facade\System\LockFacade.cs" />
+    <Compile Include="Facade\System\PermissionFacade.cs" />
+    <Compile Include="Facade\System\RoleFacade.cs" />
+    <Compile Include="Facade\System\SiteFacade.cs" />
+    <Compile Include="Facade\System\UserProfileFacade.cs" />
+    <Compile Include="Facade\Tool\SUIncrementDecrementFacade.cs" />
+    <Compile Include="Messages\Cash\CashRequest.cs" />
+    <Compile Include="Messages\Cash\CashResponse.cs" />
+    <Compile Include="Messages\Cash\GeneralLedgerRequest.cs" />
+    <Compile Include="Messages\Cash\GeneralLedgerResponse.cs" />
+    <Compile Include="Messages\CommonRequest.cs" />
+    <Compile Include="Messages\CommonResponse.cs" />
+    <Compile Include="Messages\Dictionary\ActivityResponse.cs" />
+    <Compile Include="Messages\Dictionary\AutoBusinessParallelResponse.cs" />
+    <Compile Include="Messages\Dictionary\AutoNumberListRequest.cs" />
+    <Compile Include="Messages\Dictionary\AutoNumberListResponse.cs" />
+    <Compile Include="Messages\Dictionary\ExchangeRateRequest.cs" />
+    <Compile Include="Messages\Dictionary\ExchangeRateResponse.cs" />
+    <Compile Include="Messages\Dictionary\MutualResponse.cs" />
+    <Compile Include="Messages\Dictionary\MutualRequest.cs" />
+    <Compile Include="Messages\Dictionary\CalculateClosingResponse.cs" />
+    <Compile Include="Messages\Dictionary\CalculateClosingRequest.cs" />
+    <Compile Include="Messages\Dictionary\BudgetSourceCategoryRequest.cs" />
+    <Compile Include="Messages\Dictionary\BudgetSourceCategoryResponse.cs" />
+    <Compile Include="Messages\Dictionary\BuildingRequest.cs" />
+    <Compile Include="Messages\Dictionary\BuildingResponse.cs" />
+    <Compile Include="Messages\Dictionary\CompanyProfileRequest.cs" />
+    <Compile Include="Messages\Dictionary\CompanyProfileResponse.cs" />
+    <Compile Include="Messages\Dictionary\EmployeeLeasingRequest.cs" />
+    <Compile Include="Messages\Dictionary\EmployeeLeasingResponse.cs" />
+    <Compile Include="Messages\Dictionary\ElectricalWorkResponse.cs" />
+    <Compile Include="Messages\Dictionary\ElectrialWorkRequest.cs" />
+    <Compile Include="Messages\Estimate\EstimateDetailStatementFixedAssetRequest.cs" />
+    <Compile Include="Messages\Estimate\EstimateDetailStatementFixedAssetResponse.cs" />
+    <Compile Include="Messages\Estimate\EstimateDetailStatementPartBRequest.cs" />
+    <Compile Include="Messages\Estimate\EstimateDetailStatementPartBResponse.cs" />
+    <Compile Include="Messages\Estimate\EstimateDetailStatementRequest.cs" />
+    <Compile Include="Messages\Estimate\EstimateDetailStatementResponse.cs" />
+    <Compile Include="Messages\FixedAsset\FixedAssetLedgerRequest.cs" />
+    <Compile Include="Messages\FixedAsset\FixedAssetLedgerResponse.cs" />
+    <Compile Include="Messages\FixedAsset\FixedAssetVoucherRequest.cs" />
+    <Compile Include="Messages\FixedAsset\FixedAssetVoucherResponse.cs" />
+    <Compile Include="Messages\General\AccountTranferVourcherReponse.cs" />
+    <Compile Include="Messages\General\AccountTranferVourcherRequest.cs" />
+    <Compile Include="Messages\Opening\OpeningInventoryEntryRequest.cs" />
+    <Compile Include="Messages\Opening\OpeningInventoryEntryResponse.cs" />
+    <Compile Include="Messages\Opening\OpeningFixedAssetEntryRequest.cs" />
+    <Compile Include="Messages\Opening\OpeningFixedAssetEntryResponse.cs" />
+    <Compile Include="Messages\Opening\OpeningSupplyEntryResponse.cs" />
+    <Compile Include="Messages\Report\C30BBRequest.cs" />
+    <Compile Include="Messages\Report\C30BBResponse.cs" />
+    <Compile Include="Messages\Report\FixedAssetHousingReportRequest.cs" />
+    <Compile Include="Messages\Report\FixedAssetHousingReportResponse.cs" />
+    <Compile Include="Messages\Report\ReportDataTemplateResponse.cs" />
+    <Compile Include="Messages\Report\ReportDataTemplateResquest.cs" />
+    <Compile Include="Messages\Salary\SalaryVoucherRequest.cs" />
+    <Compile Include="Messages\Salary\SalaryVoucherResponse.cs" />
+    <Compile Include="Messages\Search\SearchRequest.cs" />
+    <Compile Include="Messages\Search\SearchResponse.cs" />
+    <Compile Include="Messages\Deposit\DepositRequest.cs" />
+    <Compile Include="Messages\Deposit\DepositResponse.cs" />
+    <Compile Include="Messages\Dictionary\AccountingObjectRequest.cs" />
+    <Compile Include="Messages\Dictionary\AccountingObjectResponse.cs" />
+    <Compile Include="Messages\Dictionary\AccountTranferRequest.cs" />
+    <Compile Include="Messages\Dictionary\AccountTranferResponse.cs" />
+    <Compile Include="Messages\Dictionary\AudittingLogResponse.cs" />
+    <Compile Include="Messages\Dictionary\AutoBusinessRequest.cs" />
+    <Compile Include="Messages\Dictionary\AutoBusinessResponse.cs" />
+    <Compile Include="Messages\Dictionary\BankRequest.cs" />
+    <Compile Include="Messages\Dictionary\BankResponse.cs" />
+    <Compile Include="Messages\Dictionary\CapitalAllocateRequest.cs" />
+    <Compile Include="Messages\Dictionary\CapitalAllocateResponse.cs" />
+    <Compile Include="Messages\Dictionary\CurrencyRequest.cs" />
+    <Compile Include="Messages\Dictionary\CurrencyResponse.cs" />
+    <Compile Include="Messages\Dictionary\DBOptionRequest.cs" />
+    <Compile Include="Messages\Dictionary\DBOptionResponse.cs" />
+    <Compile Include="Messages\Dictionary\InventoryItemReponse.cs" />
+    <Compile Include="Messages\Dictionary\InventoryItemRequest.cs" />
+    <Compile Include="Messages\Dictionary\MergerFundRequest.cs" />
+    <Compile Include="Messages\Dictionary\MergerFundResponse.cs" />
+    <Compile Include="Messages\Dictionary\PlanTemplateItemRequest.cs" />
+    <Compile Include="Messages\Dictionary\PlanTemplateItemResponse.cs" />
+    <Compile Include="Messages\Dictionary\PlanTemplateListRequest.cs" />
+    <Compile Include="Messages\Dictionary\PlanTemplateListResponse.cs" />
+    <Compile Include="Facade\Dictionary\VendorFacade.cs" />
+    <Compile Include="Messages\Cash\ReceiptVoucherRequest.cs" />
+    <Compile Include="Messages\Cash\ReceiptVoucherResponse.cs" />
+    <Compile Include="Messages\Dictionary\AccountCategoryRequest.cs" />
+    <Compile Include="Messages\Dictionary\AccountCategoryResponse.cs" />
+    <Compile Include="Messages\Dictionary\AccountingRequest.cs" />
+    <Compile Include="Messages\Dictionary\AccountingResponse.cs" />
+    <Compile Include="Messages\Dictionary\AccountRequest.cs" />
+    <Compile Include="Messages\Dictionary\AccountResponse.cs" />
+    <Compile Include="Messages\Dictionary\AutoNumberRequest.cs" />
+    <Compile Include="Messages\Dictionary\AutoNumberResponse.cs" />
+    <Compile Include="Messages\Dictionary\BudgetCategoryRequest.cs" />
+    <Compile Include="Messages\Dictionary\BudgetCategoryResponse.cs" />
+    <Compile Include="Messages\Dictionary\BudgetChapterRequest.cs" />
+    <Compile Include="Messages\Dictionary\BudgetChapterResponse.cs" />
+    <Compile Include="Messages\Dictionary\BudgetItemRequest.cs" />
+    <Compile Include="Messages\Dictionary\BudgetItemResponse.cs" />
+    <Compile Include="Messages\Dictionary\BudgetSourceRequest.cs" />
+    <Compile Include="Messages\Dictionary\BudgetSourceResponse.cs" />
+    <Compile Include="Messages\Dictionary\CustomerRequest.cs" />
+    <Compile Include="Messages\Dictionary\CustomerResponse.cs" />
+    <Compile Include="Messages\Dictionary\DepartmentRequest.cs" />
+    <Compile Include="Messages\Dictionary\DepartmentResponse.cs" />
+    <Compile Include="Messages\Dictionary\EmployeeRequest.cs" />
+    <Compile Include="Messages\Dictionary\EmployeeResponse.cs" />
+    <Compile Include="Messages\Dictionary\FixedAssetCategoryRequest.cs" />
+    <Compile Include="Messages\Dictionary\FixedAssetCategoryResponse.cs" />
+    <Compile Include="Messages\Dictionary\FixedAssetRequest.cs" />
+    <Compile Include="Messages\Dictionary\FixedAssetResponse.cs" />
+    <Compile Include="Messages\Dictionary\PayItemRequest.cs" />
+    <Compile Include="Messages\Dictionary\PayItemResponse.cs" />
+    <Compile Include="Messages\Dictionary\AudittingLogRequest.cs" />
+    <Compile Include="Messages\Dictionary\ProjectRequest.cs" />
+    <Compile Include="Messages\Dictionary\ProjectResponse.cs" />
+    <Compile Include="Messages\Dictionary\RefTypeRequest.cs" />
+    <Compile Include="Messages\Dictionary\RefTypeResponse.cs" />
+    <Compile Include="Messages\Dictionary\StockResponse.cs" />
+    <Compile Include="Messages\Dictionary\StockRequest.cs" />
+    <Compile Include="Messages\Dictionary\VendorRequest.cs" />
+    <Compile Include="Messages\Dictionary\VendorResponse.cs" />
+    <Compile Include="Messages\Dictionary\VoucherListRequest.cs" />
+    <Compile Include="Messages\Dictionary\VoucherListResponse.cs" />
+    <Compile Include="Messages\Dictionary\VoucherTypeRequest.cs" />
+    <Compile Include="Messages\Dictionary\VoucherTypeResponse.cs" />
+    <Compile Include="Messages\Estimate\EstimateRequest.cs" />
+    <Compile Include="Messages\Estimate\EstimateResponse.cs" />
+    <Compile Include="Messages\FixedAsset\FAArmortizationRequest.cs" />
+    <Compile Include="Messages\FixedAsset\FAArmortizationResponse.cs" />
+    <Compile Include="Messages\FixedAsset\FADecrementRequest.cs" />
+    <Compile Include="Messages\FixedAsset\FADecrementResponse.cs" />
+    <Compile Include="Messages\FixedAsset\FAIncrementRequest.cs" />
+    <Compile Include="Messages\FixedAsset\FAIncrementResponse.cs" />
+    <Compile Include="Messages\General\CaptitalAllocateVoucherReponse.cs" />
+    <Compile Include="Messages\General\CaptitalAllocateVoucherRequest.cs" />
+    <Compile Include="Messages\General\GeneralReponse.cs" />
+    <Compile Include="Messages\General\GeneralRequest.cs" />
+    <Compile Include="Messages\Inventory\ItemTransactionRequest.cs" />
+    <Compile Include="Messages\Inventory\ItemTransactionResponse.cs" />
+    <Compile Include="Messages\JournalEntryAccountRequest.cs" />
+    <Compile Include="Messages\JournalEntryAccountResponse.cs" />
+    <Compile Include="Messages\MessageBase\AcknowledgeType.cs" />
+    <Compile Include="Messages\MessageBase\PersistType.cs" />
+    <Compile Include="Messages\MessageBase\RequestBase.cs" />
+    <Compile Include="Messages\MessageBase\ResponseBase.cs" />
+    <Compile Include="Facade\Dictionary\PayItemFacade.cs" />
+    <Compile Include="Messages\Opening\OpeningAccountEntryDetailRequest.cs" />
+    <Compile Include="Messages\Opening\OpeningAccountEntryDetailResponse.cs" />
+    <Compile Include="Messages\Opening\OpeningAccountEntryRequest.cs" />
+    <Compile Include="Messages\Opening\OpeningAccountEntryResponse.cs" />
+    <Compile Include="Messages\Report\CashReportRequest.cs" />
+    <Compile Include="Messages\Report\CashReportResponse.cs" />
+    <Compile Include="Messages\Report\ReportGroupRequest.cs" />
+    <Compile Include="Messages\Report\ReportGroupResponse.cs" />
+    <Compile Include="Messages\Report\ReportListRequest.cs" />
+    <Compile Include="Messages\Report\ReportListResponse.cs" />
+    <Compile Include="Messages\Salary\SalaryRequest.cs" />
+    <Compile Include="Messages\Salary\SalaryResponse.cs" />
+    <Compile Include="Messages\System\LockResponse.cs" />
+    <Compile Include="Messages\System\LockRequest.cs" />
+    <Compile Include="Messages\System\PermissionRequest.cs" />
+    <Compile Include="Messages\System\PermissionResponse.cs" />
+    <Compile Include="Messages\System\RoleRequest.cs" />
+    <Compile Include="Messages\System\RoleResponse.cs" />
+    <Compile Include="Messages\System\SiteRequest.cs" />
+    <Compile Include="Messages\System\SiteResponse.cs" />
+    <Compile Include="Messages\System\UserProfileRequest.cs" />
+    <Compile Include="Messages\System\UserProfileResponse.cs" />
+    <Compile Include="Messages\Tool\SUIncrementDecrementResponse.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TSD.AccountingSoft.BusinessEntities\TSD.AccountingSoft.BusinessEntities.csproj">
+      <Project>{ff5c9137-6b86-43dd-99cf-a214675c72b8}</Project>
+      <Name>TSD.AccountingSoft.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSD.AccountingSoft.DataObjects\TSD.AccountingSoft.DataAccess.csproj">
+      <Project>{9318ee7f-35d4-4ecc-9a23-321500ab0de7}</Project>
+      <Name>TSD.AccountingSoft.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSD.Enum\TSD.Enum.csproj">
+      <Project>{923f1acb-893f-4d65-b2bf-8bb2bcb10d30}</Project>
+      <Name>TSD.Enum</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{989CF15F-35A7-4BCC-AA36-A5D010031392}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSD.AccountingSoft.Model</RootNamespace>
+    <AssemblyName>TSD.AccountingSoft.Model</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=1.1.0.188, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.1.1.0.118\lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\BaseModel\BaseVoucherModel.cs" />
+    <Compile Include="BusinessObjects\Cash\AccountBalanceModel.cs" />
+    <Compile Include="BusinessObjects\Cash\CashParalellDetailModel.cs" />
+    <Compile Include="BusinessObjects\Cash\GeneralLedgerModel.cs" />
+    <Compile Include="BusinessObjects\Cash\CashDetailModel.cs" />
+    <Compile Include="BusinessObjects\Cash\CashModel.cs" />
+    <Compile Include="BusinessObjects\Cash\ReceiptVoucherDetailModel.cs" />
+    <Compile Include="BusinessObjects\Cash\ReceiptVoucherParalellDetailModel.cs" />
+    <Compile Include="BusinessObjects\Cash\ReceiptVoucherModel.cs" />
+    <Compile Include="BusinessObjects\Deposit\DepositDetailModel.cs" />
+    <Compile Include="BusinessObjects\Deposit\DepositDetailParallelModel.cs" />
+    <Compile Include="BusinessObjects\Deposit\DepositModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\AccountCategoryModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\AccountingObjectCategoryModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\AccountModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\AccountTranferModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\ActivityModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\AudittingLogModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\AutoBusinessModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\AutoBusinessParallelModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\AutoNumberListModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\ExchangeRateModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\FixedAssetAccessaryModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\MutualModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\CalculateClosingModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\AutoNumberModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\BankModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\BudgetCategoryModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\BudgetChapterModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\BudgetItemModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\BudgetSourceCategoryModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\BudgetSourceModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\BudgetSourcePropertyModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\BuildingModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\CapitalAllocateModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\CompanyProfileModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\InventoryItemReportModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\CurrencyModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\CustomerModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\DatabaseModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\DBOptionModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\DepartmentModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\EmployeeLeasingModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\EmployeeModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\EmployeePayItemModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\FixedAssetCategoryModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\FixedAssetCurrencyModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\FixedAssetModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\AccountingObjectModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\InventoryItemModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\MergerFundModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\PayItemModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\PlanTemplateItemModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\PlanTemplateListModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\ProjectModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\RefTypeModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\ElectricalWorkModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\StockModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\VendorModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\VoucherListModel.cs" />
+    <Compile Include="BusinessObjects\Dictionary\VoucherTypeModel.cs" />
+    <Compile Include="BusinessObjects\Estimate\EstimateDetailModel.cs" />
+    <Compile Include="BusinessObjects\Estimate\EstimateModel.cs" />
+    <Compile Include="BusinessObjects\FixedAsset\FixedAssetArmortizationDetailModel.cs" />
+    <Compile Include="BusinessObjects\FixedAsset\FixedAssetArmortizationModel.cs" />
+    <Compile Include="BusinessObjects\FixedAsset\FixedAssetDecrementDetailModel.cs" />
+    <Compile Include="BusinessObjects\FixedAsset\FixedAssetDecrementDetailParallelModel.cs" />
+    <Compile Include="BusinessObjects\FixedAsset\FixedAssetDecrementModel.cs" />
+    <Compile Include="BusinessObjects\FixedAsset\FixedAssetIncrementDetailModel.cs" />
+    <Compile Include="BusinessObjects\FixedAsset\FixedAssetIncrementDetailParallelModel.cs" />
+    <Compile Include="BusinessObjects\FixedAsset\FixedAssetIncrementModel.cs" />
+    <Compile Include="BusinessObjects\FixedAsset\FixedAssetLedgerModel.cs" />
+    <Compile Include="BusinessObjects\FixedAsset\FixedAssetVoucherModel.cs" />
+    <Compile Include="BusinessObjects\General\CaptitalAllocateVoucherModel.cs" />
+    <Compile Include="BusinessObjects\General\AccountTranferVourcherModel.cs" />
+    <Compile Include="BusinessObjects\General\GeneralParalellDetailModel.cs" />
+    <Compile Include="BusinessObjects\General\GeneralDetailModel.cs" />
+    <Compile Include="BusinessObjects\General\GeneralModel.cs" />
+    <Compile Include="BusinessObjects\General\JournalEntryAccountModel.cs" />
+    <Compile Include="BusinessObjects\Inventory\ItemTransactionDetailParallelModel.cs" />
+    <Compile Include="BusinessObjects\Inventory\ReCalOutputItemTransactionModel.cs" />
+    <Compile Include="BusinessObjects\Inventory\ItemTransactionDetailModel.cs" />
+    <Compile Include="BusinessObjects\Inventory\ItemTransactionModel.cs" />
+    <Compile Include="BusinessObjects\Opening\OpeningAccountEntryDetailModel.cs" />
+    <Compile Include="BusinessObjects\Opening\OpeningAccountEntryModel.cs" />
+    <Compile Include="BusinessObjects\Opening\OpeningFixedAssetEntryModel.cs" />
+    <Compile Include="BusinessObjects\Opening\OpeningInventoryEntryModel.cs" />
+    <Compile Include="BusinessObjects\Opening\OpeningSupplyEntryModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\EmployeeForEstimateModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\EstimateDetailStatementFixedAssetModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\EstimateDetailStatementInfoModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\EstimateDetailStatementModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\EstimateDetailStatementPartBModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\FixedAssetForEstimateModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\FundStuationModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\GeneralEstimateModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\GeneralPaymentDetailEstimateModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\GeneralPaymentEstimateModel.cs" />
+    <Compile Include="BusinessObjects\Report\Estimate\GeneralReceiptEstimateModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\A02LDTLModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\ReportActivityB02Model.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\B01BCQTModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\ReportB01BCTCModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\ReportB01CII01Model.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\ReportB01CIIModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\B01HModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\B03BNGModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\B14QModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\B09BNGModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\F331BNGModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\F03BNGModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\ReportB01CIModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\ReportB03bBCTCModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\ReportB04BCTCModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\ReportF03BCTModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\ReportS104HModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\S03BHModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\S03AHModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\CashReportModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\S05HModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\AdvancePaymentModel.cs" />
+    <Compile Include="BusinessObjects\Report\Finacial\S33HModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAsset30KPart2Model.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetB01Model.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetB02Model.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetB03H30KModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetB03HModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetC55aHDModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetCardModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetCardsModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetFAInventoryModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetFAInventoryCarModel.cs.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetFAInventoryHouseModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetHousingReportModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetS24HModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetS26HModel.cs" />
+    <Compile Include="BusinessObjects\Report\FixedAsset\FixedAssetS31HModel.cs" />
+    <Compile Include="BusinessObjects\Report\LedgerAccounting\ReportS104HModel.cs" />
+    <Compile Include="BusinessObjects\Report\ReportDataTemplateModel.cs" />
+    <Compile Include="BusinessObjects\Report\ReportGroupModel.cs" />
+    <Compile Include="BusinessObjects\Report\ReportListModel.cs" />
+    <Compile Include="BusinessObjects\Report\Voucher\C22HModel.cs" />
+    <Compile Include="BusinessObjects\Report\Voucher\C11HModel.cs" />
+    <Compile Include="BusinessObjects\Report\Voucher\C30BBModel.cs" />
+    <Compile Include="BusinessObjects\Report\Voucher\AccountingVoucherModel.cs" />
+    <Compile Include="BusinessObjects\Report\Voucher\C30BB501Model.cs" />
+    <Compile Include="BusinessObjects\Salary\SalaryModel.cs" />
+    <Compile Include="BusinessObjects\Salary\SalaryVoucherModel.cs" />
+    <Compile Include="BusinessObjects\Search\SearchModel.cs" />
+    <Compile Include="BusinessObjects\System\LockModel.cs" />
+    <Compile Include="BusinessObjects\System\PermissionModel.cs" />
+    <Compile Include="BusinessObjects\System\PermissionSiteModel.cs" />
+    <Compile Include="BusinessObjects\System\RoleModel.cs" />
+    <Compile Include="BusinessObjects\System\RoleSiteModel.cs" />
+    <Compile Include="BusinessObjects\System\SiteModel.cs" />
+    <Compile Include="BusinessObjects\System\UserProfileModel.cs" />
+    <Compile Include="BusinessObjects\Tool\SUIncrementDecrementDetailModel.cs" />
+    <Compile Include="BusinessObjects\Tool\SUIncrementDecrementModel.cs" />
+    <Compile Include="DataTransferObjectMapper\DictionaryMapper.cs" />
+    <Compile Include="DataTransferObjectMapper\Mapper.cs" />
+    <Compile Include="DataTransferObjectMapper\ReportMapper.cs" />
+    <Compile Include="DataTransferObjectMapper\VoucherMapper.cs" />
+    <Compile Include="IModel.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TSD.AccountingSoft.BusinessComponents\TSD.AccountingSoft.BusinessComponents.csproj">
+      <Project>{e9c3e053-c122-4ca8-b6ea-821a2f1981b7}</Project>
+      <Name>TSD.AccountingSoft.BusinessComponents</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSD.AccountingSoft.BusinessEntities\TSD.AccountingSoft.BusinessEntities.csproj">
+      <Project>{ff5c9137-6b86-43dd-99cf-a214675c72b8}</Project>
+      <Name>TSD.AccountingSoft.BusinessEntities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

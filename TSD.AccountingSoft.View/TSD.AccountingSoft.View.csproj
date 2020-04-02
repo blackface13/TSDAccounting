@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68C5CD05-C4E8-4184-93C2-39CE0006E115}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSD.AccountingSoft.View</RootNamespace>
+    <AssemblyName>TSD.AccountingSoft.View</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cash\IC30BBsView.cs" />
+    <Compile Include="Cash\IC30BBView.cs" />
+    <Compile Include="Cash\IAccountBalancesView.cs" />
+    <Compile Include="Cash\IAccountBalanceView.cs" />
+    <Compile Include="Cash\IGeneralLedgersView.cs" />
+    <Compile Include="Cash\IGeneralLedgerView.cs" />
+    <Compile Include="Cash\IPaymentVouchersView.cs" />
+    <Compile Include="Cash\IPaymentVoucherView.cs" />
+    <Compile Include="Cash\IReceiptVouchersView.cs" />
+    <Compile Include="Cash\IReceiptVoucherView.cs" />
+    <Compile Include="Deposit\IPaymentDepositsView.cs" />
+    <Compile Include="Deposit\IPaymentDepositView.cs" />
+    <Compile Include="Deposit\IReceiptDepositsView.cs" />
+    <Compile Include="Deposit\IReceiptDepositView.cs" />
+    <Compile Include="Dictionary\IAccountingObjectCategoriesView.cs" />
+    <Compile Include="Dictionary\IAutoBusinessParallelsView.cs" />
+    <Compile Include="Dictionary\IAutoBusinessParallelView.cs" />
+    <Compile Include="Dictionary\IActivitysView.cs" />
+    <Compile Include="Dictionary\IActivityView.cs" />
+    <Compile Include="Dictionary\IExchangeRatesView.cs" />
+    <Compile Include="Dictionary\IExchangeRateView.cs" />
+    <Compile Include="Dictionary\IAutoNumberListsView.cs" />
+    <Compile Include="Dictionary\IAutoNumberListView.cs" />
+    <Compile Include="Dictionary\IMutualView.cs" />
+    <Compile Include="Dictionary\IMutualsView.cs" />
+    <Compile Include="Dictionary\ICalculateClosingsView.cs" />
+    <Compile Include="Dictionary\ICalculateClosingView.cs" />
+    <Compile Include="Dictionary\IBanksCompanyProfile.cs" />
+    <Compile Include="Dictionary\IBankCompanyProfile.cs" />
+    <Compile Include="Dictionary\IAccountTranfersView.cs" />
+    <Compile Include="Dictionary\IAccountTranferView.cs" />
+    <Compile Include="Dictionary\IAudittingLogsView.cs" />
+    <Compile Include="Dictionary\IAudittingLogView.cs" />
+    <Compile Include="Dictionary\IAutoBusinesssView.cs" />
+    <Compile Include="Dictionary\IAutoBusinessView.cs" />
+    <Compile Include="Dictionary\IAutoNumbersView.cs" />
+    <Compile Include="Dictionary\IBanksView.cs" />
+    <Compile Include="Dictionary\IBankView.cs" />
+    <Compile Include="Dictionary\IBudgetChaptersView.cs" />
+    <Compile Include="Dictionary\IBudgetSourceCategoriesView.cs" />
+    <Compile Include="Dictionary\IBudgetSourceCategoryView.cs" />
+    <Compile Include="Dictionary\IBuildingsView.cs" />
+    <Compile Include="Dictionary\IBuildingView.cs" />
+    <Compile Include="Dictionary\ICapitalAllocatesView.cs" />
+    <Compile Include="Dictionary\ICapitalAllocateView.cs" />
+    <Compile Include="Dictionary\IAccountingObjectsView.cs" />
+    <Compile Include="Dictionary\IAccountingObjectView.cs" />
+    <Compile Include="Dictionary\ICurrenciesView.cs" />
+    <Compile Include="Dictionary\ICurrencyView.cs" />
+    <Compile Include="Dictionary\IAccountCategoriesView.cs" />
+    <Compile Include="Dictionary\IAccountCategoryView.cs" />
+    <Compile Include="Dictionary\IBudgetCategoriesView.cs" />
+    <Compile Include="Dictionary\IBudgetCategoryView.cs" />
+    <Compile Include="Dictionary\IBudgetChapterView.cs" />
+    <Compile Include="Dictionary\ICustomerView.cs" />
+    <Compile Include="Dictionary\ICustomerViews.cs" />
+    <Compile Include="Dictionary\IDBOptionsView.cs" />
+    <Compile Include="Dictionary\IDBOptionView.cs" />
+    <Compile Include="Dictionary\IEmployeeLeasingsView.cs" />
+    <Compile Include="Dictionary\IEmployeeLeasingView.cs" />
+    <Compile Include="Dictionary\IEmployeesView.cs" />
+    <Compile Include="Dictionary\IEmployeeView.cs" />
+    <Compile Include="Dictionary\IFixedAssetCategoriesView.cs" />
+    <Compile Include="Dictionary\IFixedAssetsView.cs" />
+    <Compile Include="Dictionary\IAccountsView.cs" />
+    <Compile Include="Dictionary\IAccountView.cs" />
+    <Compile Include="Dictionary\IAutoNumberView.cs" />
+    <Compile Include="Dictionary\IBudgetItemsView.cs" />
+    <Compile Include="Dictionary\IBudgetItemView.cs" />
+    <Compile Include="Dictionary\IBudgetSourcesView.cs" />
+    <Compile Include="Dictionary\IBudgetSourceView.cs" />
+    <Compile Include="Dictionary\IDepartmentsView.cs" />
+    <Compile Include="Dictionary\IDepartmentView.cs" />
+    <Compile Include="Dictionary\IFixedAssetCategoryView.cs" />
+    <Compile Include="Dictionary\IFixedAssetView.cs" />
+    <Compile Include="Dictionary\IInventoryItemsView.cs" />
+    <Compile Include="Dictionary\IInventoryItemView.cs" />
+    <Compile Include="Dictionary\IMergerFundsView.cs" />
+    <Compile Include="Dictionary\IMergerFundView.cs" />
+    <Compile Include="Dictionary\IPayItemsView.cs" />
+    <Compile Include="Dictionary\IPayItemView.cs" />
+    <Compile Include="Dictionary\IPlanTemplateItemsView.cs" />
+    <Compile Include="Dictionary\IPlanTemplateItemView.cs" />
+    <Compile Include="Dictionary\IPlanTemplateListsView.cs" />
+    <Compile Include="Dictionary\IPlanTemplateListView.cs" />
+    <Compile Include="Dictionary\IProjectsView.cs" />
+    <Compile Include="Dictionary\IProjectView.cs" />
+    <Compile Include="Dictionary\IRefTypesView.cs" />
+    <Compile Include="Dictionary\IElectricalWorkView.cs" />
+    <Compile Include="Dictionary\IRefTypeView.cs" />
+    <Compile Include="Dictionary\IStockView.cs" />
+    <Compile Include="Dictionary\IStocksView.cs" />
+    <Compile Include="Dictionary\IVendorsView.cs" />
+    <Compile Include="Dictionary\IVendorView.cs" />
+    <Compile Include="Dictionary\IVoucherListsView.cs" />
+    <Compile Include="Dictionary\IVoucherListView.cs" />
+    <Compile Include="Dictionary\IVoucherTypesView.cs" />
+    <Compile Include="Dictionary\IVoucherTypeView.cs" />
+    <Compile Include="Estimate\EstimateDetailStatementView.cs" />
+    <Compile Include="Estimate\IEstimateDetailStatementFixedAssetView.cs" />
+    <Compile Include="Estimate\IEstimateDetailStatementPartBView.cs" />
+    <Compile Include="Estimate\IPaymentEstimateDetailsView.cs" />
+    <Compile Include="Estimate\IPaymentEstimateDetailView.cs" />
+    <Compile Include="Estimate\IPaymentEstimatesView.cs" />
+    <Compile Include="Estimate\IPaymentEstimateView.cs" />
+    <Compile Include="Estimate\IReceiptEstimatesView.cs" />
+    <Compile Include="Estimate\IReceiptEstimateView.cs" />
+    <Compile Include="FixedAsset\IFixedAssetArmortizationsView.cs" />
+    <Compile Include="FixedAsset\IFixedAssetArmortizationView.cs" />
+    <Compile Include="FixedAsset\IFixedAssetDecrementsView.cs" />
+    <Compile Include="FixedAsset\IFixedAssetDecrementView.cs" />
+    <Compile Include="FixedAsset\IFixedAssetIncrementsView.cs" />
+    <Compile Include="FixedAsset\IFixedAssetIncrementView.cs" />
+    <Compile Include="FixedAsset\IFixedAssetLedgersView.cs" />
+    <Compile Include="FixedAsset\IFixedAssetLedgerView.cs" />
+    <Compile Include="FixedAsset\IFixedAssetVouchersView.cs" />
+    <Compile Include="FixedAsset\IFixedAssetVoucherView.cs" />
+    <Compile Include="General\IAccountTranferVouchersView.cs" />
+    <Compile Include="General\ICaptitalAllocateVouchersView.cs" />
+    <Compile Include="General\IGeneralVouchersView.cs" />
+    <Compile Include="General\IGeneralVoucherView.cs" />
+    <Compile Include="Inventory\IReCalItemTransactionView.cs" />
+    <Compile Include="Inventory\IItemTransactionView.cs" />
+    <Compile Include="Inventory\IItemTransactionsView.cs" />
+    <Compile Include="IView.cs" />
+    <Compile Include="OpeningAccountEntry\IOpeningAccountEntriesView.cs" />
+    <Compile Include="OpeningAccountEntry\IOpeningAccountEntryDetailsView.cs" />
+    <Compile Include="OpeningAccountEntry\IOpeningAccountEntryView.cs" />
+    <Compile Include="OpeningFixedAssetEntry\IOpeningFixedAssetEntriesView.cs" />
+    <Compile Include="OpeningFixedAssetEntry\IOpeningFixedAssetEntryView.cs" />
+    <Compile Include="OpeningInventoryEntry\IOpeningInventoryEntriesView.cs" />
+    <Compile Include="OpeningInventoryEntry\IOpeningInventoryEntryView.cs" />
+    <Compile Include="OpeningSupplyEntry\IOpeningSupplyEntriesView.cs" />
+    <Compile Include="OpeningSupplyEntry\IOpeningSupplyEntryView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\IFixedAssetHousingReportsView.cs" />
+    <Compile Include="Report\IFixedAssetHousingReportView.cs" />
+    <Compile Include="Report\IReportDataTemplatesView.cs" />
+    <Compile Include="Report\IReportGroupView.cs" />
+    <Compile Include="Report\IReportView.cs" />
+    <Compile Include="Salary\ISalariesView.cs" />
+    <Compile Include="Salary\ISalaryView.cs" />
+    <Compile Include="Salary\ISalaryVoucherView.cs" />
+    <Compile Include="Salary\ISalaryVouchersView.cs" />
+    <Compile Include="System\ILockView.cs" />
+    <Compile Include="System\IPermissionsView.cs" />
+    <Compile Include="System\IPermissionView.cs" />
+    <Compile Include="System\IRolesView.cs" />
+    <Compile Include="System\IRoleView.cs" />
+    <Compile Include="System\ISitesView.cs" />
+    <Compile Include="System\ISiteView.cs" />
+    <Compile Include="System\IUserProfilesView.cs" />
+    <Compile Include="System\IUserProfileView.cs" />
+    <Compile Include="Tool\ISUIncrementDecrementsView.cs" />
+    <Compile Include="Tool\ISUIncrementDecrementView.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\TSD.AccountingSoft.Model\TSD.AccountingSoft.Model.csproj">
+      <Project>{989cf15f-35a7-4bcc-aa36-a5d010031392}</Project>
+      <Name>TSD.AccountingSoft.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

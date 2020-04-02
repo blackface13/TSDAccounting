@@ -1,0 +1,1923 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4A1A9F8D-55F1-4748-A23E-896C194A80CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSD.AccountingSoft.WindowsForm</RootNamespace>
+    <AssemblyName>TSD Accounting</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://buca.vn/support</SupportUrl>
+    <ErrorReportUrl>http://buca.vn/support</ErrorReportUrl>
+    <ProductName>A-BIGTIME BNG</ProductName>
+    <PublisherName>BuCA JSC</PublisherName>
+    <SuiteName>A-BIGTIME</SuiteName>
+    <ApplicationRevision>45</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>main.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BigTimeUpdate, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ABIGTIME-BNG\TSD.AccountingSoft.WindowsForm\bin\Debug\BigTimeUpdate.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Docking, Version=4.3.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.3.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon, Version=4.3.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit, Version=4.3.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace, Version=4.3.1.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e, processorArchitecture=MSIL">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="DateTimeRangeBlockDev">
+      <HintPath>..\packages\DateTimeRangeBlockDev.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v12.2.Core, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v12.2.Core, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Design.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\DevExpress\DXperience 12.2\Bin\Framework\Design\DevExpress.Design.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.EasyTest.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.Design.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.Design.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v12.2.Core, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v12.2.Core, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v12.2.Core, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v12.2.UI, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v12.2.Wizard, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDashboard.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>C:\Program Files\DevExpress\DXperience 12.2\Bin\Framework\DevExpress.XtraEditors.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v12.2.Core, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v12.2.Presets, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v12.2.Win, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v12.2.Extensions, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v12.2.Core, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraSpellChecker.v12.2.Design, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DevExpress.XtraSpellChecker.v12.2.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TSD.AccountingSoft.Report\bin\Debug\DevExpress.XtraVerticalGrid.v12.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraWizard.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Ionic.Zip, Version=1.9.1.8, Culture=neutral, PublicKeyToken=edbe51ad942a3f5c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualStudio.TextManager.Interop, Version=7.1.40304.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="PerpetuumSoft.Charts, Version=6.0.0.63, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Charts.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Framework">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Framework.Export">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Framework.Export.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Framework.Model">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Framework.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Instrumentation">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Reporting, Version=6.0.0.63, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Reporting.Export.Csv, Version=6.0.0.63, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Reporting.Export.Csv.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Reporting.Export.Excel, Version=6.0.0.63, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Reporting.Export.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Reporting.Export.ExcelXml, Version=6.0.0.63, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Reporting.Export.ExcelXml.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Reporting.Export.Html, Version=6.0.0.63, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Reporting.Export.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Reporting.Export.Pdf, Version=6.0.0.63, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Reporting.Export.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Reporting.Export.Rtf, Version=6.0.0.63, Culture=neutral, PublicKeyToken=8a6ae0a3e67829b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Reporting.Export.Rtf.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Writers.Excel">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Writers.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Writers.Flash">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Writers.Flash.dll</HintPath>
+    </Reference>
+    <Reference Include="PerpetuumSoft.Writers.Svg">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\PerpetuumSoft.Writers.Svg.dll</HintPath>
+    </Reference>
+    <Reference Include="RSSHelper">
+      <HintPath>F:\Code\SDC\A-BIGTIME-BCT-2019\TSD.AccountingSoft.WindowsForm\bin\Debug\RSSHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseUserControls\BaseVoucherListDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUserControls\BaseVoucherListDetail.Designer.cs">
+      <DependentUpon>BaseVoucherListDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUserControls\BaseVoucherListUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUserControls\BaseVoucherListUserControl.Designer.cs">
+      <DependentUpon>BaseVoucherListUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonClass\AssemblyInfomation.cs" />
+    <Compile Include="CommonClass\CommonFunction.cs" />
+    <Compile Include="CommonClass\ConvertFont.cs" />
+    <Compile Include="CommonClass\GridBandPaintHelper.cs" />
+    <Compile Include="CommonClass\GridCheckMarksSelection.cs" />
+    <Compile Include="CommonClass\GridLookUpItem.cs" />
+    <Compile Include="CommonClass\ObjectGeneral.cs" />
+    <Compile Include="CommonClass\OleDbHelper.cs" />
+    <Compile Include="CommonClass\PropertyChangedDetech.cs" />
+    <Compile Include="CommonClass\RegistryHelper.cs" />
+    <Compile Include="CommonControl\CustomPanelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\MainPanelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CommonControl\MainPanelControl.Designer.cs">
+      <DependentUpon>MainPanelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase\FrmXtraBaseCategoryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase\FrmXtraBaseCategoryDetail.Designer.cs">
+      <DependentUpon>FrmXtraBaseCategoryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase\FrmXtraBaseTreeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase\FrmXtraBaseTreeDetail.Designer.cs">
+      <DependentUpon>FrmXtraBaseTreeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase\FrmXtraBaseVoucherDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase\FrmXtraBaseVoucherDetail.Designer.cs">
+      <DependentUpon>FrmXtraBaseVoucherDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase\PropertyGrid\XtraColumn.cs" />
+    <Compile Include="FormBase\PropertyGrid\XtraColumnCollection.cs" />
+    <Compile Include="FormBase\PropertyGrid\XtraColumnCollectionEditor.cs" />
+    <Compile Include="FormBase\PropertyGrid\XtraColumnCollectionHelper.cs" />
+    <Compile Include="FormBusiness\FrmOpeningSupplyEntries.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmOpeningSupplyEntries.Designer.cs">
+      <DependentUpon>FrmOpeningSupplyEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmOpeningSupplyEntryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmOpeningSupplyEntryDetail.Designer.cs">
+      <DependentUpon>FrmOpeningSupplyEntryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSalaryPostedVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSalaryPostedVoucher.Designer.cs">
+      <DependentUpon>FrmXtraSalaryPostedVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraOpeningFixedAssetEntryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraOpeningFixedAssetEntryDetail.Designer.cs">
+      <DependentUpon>FrmXtraOpeningFixedAssetEntryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraOpeningInventoryEntryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraOpeningInventoryEntryDetail.Designer.cs">
+      <DependentUpon>FrmXtraOpeningInventoryEntryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraAccountTranferVoucherDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraAccountTranferVoucherDetail.Designer.cs">
+      <DependentUpon>FrmXtraAccountTranferVoucherDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraOpeningAccountEntryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraOpeningAccountEntryDetail.Designer.cs">
+      <DependentUpon>FrmXtraOpeningAccountEntryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraPrintVoucherByLot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraPrintVoucherByLot.Designer.cs">
+      <DependentUpon>FrmXtraPrintVoucherByLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraReceiptEstimateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraReceiptEstimateDetail.Designer.cs">
+      <DependentUpon>FrmXtraReceiptEstimateDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSalaryVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSalaryVoucher.Designer.cs">
+      <DependentUpon>FrmXtraSalaryVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSearchVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSearchVoucher.Designer.cs">
+      <DependentUpon>FrmXtraSearchVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSUDecrementDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSUDecrementDetail.Designer.cs">
+      <DependentUpon>FrmXtraSUDecrementDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSUIncrementDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSUIncrementDetail.Designer.cs">
+      <DependentUpon>FrmXtraSUIncrementDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraTransferVoucherDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraTransferVoucherDetail.Designer.cs">
+      <DependentUpon>FrmXtraTransferVoucherDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraFormFAIncrementDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraFormFAIncrementDetail.designer.cs">
+      <DependentUpon>FrmXtraFormFAIncrementDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraFormFAArmortizationDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraFormFAArmortizationDetail.Designer.cs">
+      <DependentUpon>FrmXtraFormFAArmortizationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraFormFADecrementDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraFormFADecrementDetail.Designer.cs">
+      <DependentUpon>FrmXtraFormFADecrementDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraFormPaymentVoucherDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraFormPaymentVoucherDetail.Designer.cs">
+      <DependentUpon>FrmXtraFormPaymentVoucherDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraGeneralVoucherDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraGeneralVoucherDetail.Designer.cs">
+      <DependentUpon>FrmXtraGeneralVoucherDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraGenvervoucherCapitalAllocateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraGenvervoucherCapitalAllocateDetail.Designer.cs">
+      <DependentUpon>FrmXtraGenvervoucherCapitalAllocateDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraInputInventoryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraInputInventoryDetail.Designer.cs">
+      <DependentUpon>FrmXtraInputInventoryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraOutputInventoryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraOutputInventoryDetail.Designer.cs">
+      <DependentUpon>FrmXtraOutputInventoryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraPaymentDepositDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraPaymentDepositDetail.Designer.cs">
+      <DependentUpon>FrmXtraPaymentDepositDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraPaymentEstimateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraPaymentEstimateDetail.Designer.cs">
+      <DependentUpon>FrmXtraPaymentEstimateDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraReCalOutputInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraReCalOutputInventory.Designer.cs">
+      <DependentUpon>FrmXtraReCalOutputInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraReceiptDepositDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraReceiptDepositDetail.Designer.cs">
+      <DependentUpon>FrmXtraReceiptDepositDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraSalary.Designer.cs">
+      <DependentUpon>FrmXtraSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraShowVoucherForSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraShowVoucherForSalary.Designer.cs">
+      <DependentUpon>FrmXtraShowVoucherForSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraUpdateAmountExchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraUpdateAmountExchange.Designer.cs">
+      <DependentUpon>FrmXtraUpdateAmountExchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraVoucherReceiptDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusiness\FrmXtraVoucherReceiptDetail.Designer.cs">
+      <DependentUpon>FrmXtraVoucherReceiptDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraActivityDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraActivityDetail.Designer.cs">
+      <DependentUpon>FrmXtraActivityDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAutoBusinessDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAutoBusinessDetail.Designer.cs">
+      <DependentUpon>FrmXtraAutoBusinessDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAutoBusinessParallelDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAutoBusinessParallelDetail.Designer.cs">
+      <DependentUpon>FrmXtraAutoBusinessParallelDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraExchangeRateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraExchangeRateDetail.Designer.cs">
+      <DependentUpon>FrmXtraExchangeRateDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAccountTranferDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAccountTranferDetail.Designer.cs">
+      <DependentUpon>FrmXtraAccountTranferDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBankDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBankDetail.Designer.cs">
+      <DependentUpon>FrmXtraBankDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBudgetSourceCategoryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBudgetSourceCategoryDetail.Designer.cs">
+      <DependentUpon>FrmXtraBudgetSourceCategoryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBuildingDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBuildingDetail.Designer.cs">
+      <DependentUpon>FrmXtraBuildingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraCapitalAllocateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraCapitalAllocateDetail.Designer.cs">
+      <DependentUpon>FrmXtraCapitalAllocateDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAccountCategoryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAccountCategoryDetail.Designer.cs">
+      <DependentUpon>FrmXtraAccountCategoryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAccountingObjectDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAccountingObjectDetail.Designer.cs">
+      <DependentUpon>FrmXtraAccountingObjectDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBudgetCategoryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBudgetCategoryDetail.Designer.cs">
+      <DependentUpon>FrmXtraBudgetCategoryDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBudgetChapterDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBudgetChapterDetail.Designer.cs">
+      <DependentUpon>FrmXtraBudgetChapterDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmxtraBudgetItemDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmxtraBudgetItemDetail.Designer.cs">
+      <DependentUpon>FrmxtraBudgetItemDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAccountDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraAccountDetail.Designer.cs">
+      <DependentUpon>FrmXtraAccountDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBudgetSourceDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraBudgetSourceDetail.Designer.cs">
+      <DependentUpon>FrmXtraBudgetSourceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraCompanyProfileDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraCompanyProfileDetail.Designer.cs">
+      <DependentUpon>FrmXtraCompanyProfileDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraCurrencyDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraCurrencyDetail.Designer.cs">
+      <DependentUpon>FrmXtraCurrencyDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraCustomerDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraCustomerDetail.Designer.cs">
+      <DependentUpon>FrmXtraCustomerDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraDepartmentDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraDepartmentDetail.Designer.cs">
+      <DependentUpon>FrmXtraDepartmentDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraEmployeeContractDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraEmployeeContractDetail.Designer.cs">
+      <DependentUpon>FrmXtraEmployeeContractDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraEmployeeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraEmployeeDetail.Designer.cs">
+      <DependentUpon>FrmXtraEmployeeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraEmployeeLeasingDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraEmployeeLeasingDetail.Designer.cs">
+      <DependentUpon>FrmXtraEmployeeLeasingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraFixedAssetCategoryTreeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraFixedAssetCategoryTreeDetail.Designer.cs">
+      <DependentUpon>FrmXtraFixedAssetCategoryTreeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraFixedAssetDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraFixedAssetDetail.Designer.cs">
+      <DependentUpon>FrmXtraFixedAssetDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraMutualDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraMutualDetail.Designer.cs">
+      <DependentUpon>FrmXtraMutualDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraProjectDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraProjectDetail.Designer.cs">
+      <DependentUpon>FrmXtraProjectDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraRefTypeDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraRefTypeDetail.Designer.cs">
+      <DependentUpon>FrmXtraRefTypeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmCreateNewDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmCreateNewDatabase.Designer.cs">
+      <DependentUpon>FrmCreateNewDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmUnlockBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmUnlockBook.Designer.cs">
+      <DependentUpon>FrmUnlockBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraAuditingLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraAuditingLog.Designer.cs">
+      <DependentUpon>FrmXtraAuditingLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraBackUpData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraBackUpData.Designer.cs">
+      <DependentUpon>FrmXtraBackUpData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraChangePassword.Designer.cs">
+      <DependentUpon>FrmXtraChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraConvertFoxproData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraConvertFoxproData.Designer.cs">
+      <DependentUpon>FrmXtraConvertFoxproData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraDbInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraDbInfo.Designer.cs">
+      <DependentUpon>FrmXtraDbInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraDbOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraDbOption.Designer.cs">
+      <DependentUpon>FrmXtraDbOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraGetBudgetItemList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraGetBudgetItemList.Designer.cs">
+      <DependentUpon>FrmXtraGetBudgetItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraInventoryItemDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraInventoryItemDetail.Designer.cs">
+      <DependentUpon>FrmXtraInventoryItemDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraMergerFundDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraMergerFundDetail.Designer.cs">
+      <DependentUpon>FrmXtraMergerFundDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraPayItemDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraPayItemDetail.Designer.cs">
+      <DependentUpon>FrmXtraPayItemDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraPlanTemplateItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraPlanTemplateItem.Designer.cs">
+      <DependentUpon>FrmXtraPlanTemplateItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraStockDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraStockDetail.Designer.cs">
+      <DependentUpon>FrmXtraStockDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraVendorDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraVendorDetail.Designer.cs">
+      <DependentUpon>FrmXtraVendorDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraVoucherListDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDictionary\FrmXtraVoucherListDetail.Designer.cs">
+      <DependentUpon>FrmXtraVoucherListDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraExportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraExportData.Designer.cs">
+      <DependentUpon>FrmXtraExportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraOpenDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraOpenDatabase.Designer.cs">
+      <DependentUpon>FrmXtraOpenDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraPostedDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraPostedDate.Designer.cs">
+      <DependentUpon>FrmXtraPostedDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraRegister.Designer.cs">
+      <DependentUpon>FrmXtraRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraRestoreData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraRestoreData.Designer.cs">
+      <DependentUpon>FrmXtraRestoreData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraUpdateDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\FrmXtraUpdateDatabase.Designer.cs">
+      <DependentUpon>FrmXtraUpdateDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\UserProfile\FrmUserProfileDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\UserProfile\FrmUserProfileDetail.Designer.cs">
+      <DependentUpon>FrmUserProfileDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\UserProfile\UserControlUserProfileList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormSystem\UserProfile\UserControlUserProfileList.Designer.cs">
+      <DependentUpon>UserControlUserProfileList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystem\XtraAboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystem\XtraAboutForm.Designer.cs">
+      <DependentUpon>XtraAboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DBOptionHelper.cs" />
+    <Compile Include="UserControl\Dictionary\FrmAccountList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\FrmAccountList.Designer.cs">
+      <DependentUpon>FrmAccountList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAutoBusinessParallelList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAutoBusinessParallelList.Designer.cs">
+      <DependentUpon>UserControlAutoBusinessParallelList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlActivityList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlActivityList.Designer.cs">
+      <DependentUpon>UserControlActivityList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlExchangeRateList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlExchangeRateList.Designer.cs">
+      <DependentUpon>UserControlExchangeRateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAccountTranferList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAccountTranferList.Designer.cs">
+      <DependentUpon>UserControlAccountTranferList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAudittingLogList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAudittingLogList.Designer.cs">
+      <DependentUpon>UserControlAudittingLogList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAutoBusinessList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAutoBusinessList.Designer.cs">
+      <DependentUpon>UserControlAutoBusinessList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBankList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBankList.Designer.cs">
+      <DependentUpon>UserControlBankList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBudgetSourceCategoryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBudgetSourceCategoryList.Designer.cs">
+      <DependentUpon>UserControlBudgetSourceCategoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlMutualList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlMutualList.Designer.cs">
+      <DependentUpon>UserControlMutualList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBuildingList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBuildingList.Designer.cs">
+      <DependentUpon>UserControlBuildingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlCapitalAllocateList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlCapitalAllocateList.Designer.cs">
+      <DependentUpon>UserControlCapitalAllocateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAccountingObjectList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAccountingObjectList.Designer.cs">
+      <DependentUpon>UserControlAccountingObjectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainRibbonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainRibbonForm.Designer.cs">
+      <DependentUpon>MainRibbonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\en-Eg.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>en-Eg.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ResourceHelper.cs" />
+    <Compile Include="Resources\vi-Vn1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vi-Vn.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUserControls\BaseListUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUserControls\BaseListUserControl.Designer.cs">
+      <DependentUpon>BaseListUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseUserControls\BaseTreeListUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseUserControls\BaseTreeListUserControl.Designer.cs">
+      <DependentUpon>BaseTreeListUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlCashDesktop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlCashDesktop.Designer.cs">
+      <DependentUpon>UserControlCashDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlDepositDesktop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlDepositDesktop.Designer.cs">
+      <DependentUpon>UserControlDepositDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlEstimateDesktop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlEstimateDesktop.Designer.cs">
+      <DependentUpon>UserControlEstimateDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlFixedAssetDesktop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlFixedAssetDesktop.Designer.cs">
+      <DependentUpon>UserControlFixedAssetDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlGeneralDesktop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlGeneralDesktop.Designer.cs">
+      <DependentUpon>UserControlGeneralDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlInventoryDesktop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlInventoryDesktop.Designer.cs">
+      <DependentUpon>UserControlInventoryDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlSalaryDesktop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\DiagramDesktop\UserControlSalaryDesktop.Designer.cs">
+      <DependentUpon>UserControlSalaryDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAccountCategoryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAccountCategoryList.Designer.cs">
+      <DependentUpon>UserControlAccountCategoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAccountList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlAccountList.Designer.cs">
+      <DependentUpon>UserControlAccountList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBudgetCategoryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBudgetCategoryList.Designer.cs">
+      <DependentUpon>UserControlBudgetCategoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBudgetChapterList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBudgetChapterList.Designer.cs">
+      <DependentUpon>UserControlBudgetChapterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBudgetItemList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBudgetItemList.Designer.cs">
+      <DependentUpon>UserControlBudgetItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBudgetSourceList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlBudgetSourceList.Designer.cs">
+      <DependentUpon>UserControlBudgetSourceList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlCurrencyList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlCurrencyList.Designer.cs">
+      <DependentUpon>UserControlCurrencyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlCustomerList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlCustomerList.Designer.cs">
+      <DependentUpon>UserControlCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlDepartmentList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlDepartmentList.Designer.cs">
+      <DependentUpon>UserControlDepartmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlEmployeeContractList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlEmployeeContractList.Designer.cs">
+      <DependentUpon>UserControlEmployeeContractList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlEmployeeLeasingList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlEmployeeLeasingList.Designer.cs">
+      <DependentUpon>UserControlEmployeeLeasingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlEmployeeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlEmployeeList.Designer.cs">
+      <DependentUpon>UserControlEmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlFixedAssetCategoryTreeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlFixedAssetCategoryTreeList.Designer.cs">
+      <DependentUpon>UserControlFixedAssetCategoryTreeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlFixedAssetList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlFixedAssetList.Designer.cs">
+      <DependentUpon>UserControlFixedAssetList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlInventoryItemList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlInventoryItemList.Designer.cs">
+      <DependentUpon>UserControlInventoryItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlMergerFundList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlMergerFundList.Designer.cs">
+      <DependentUpon>UserControlMergerFundList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlRefTypeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlRefTypeList.Designer.cs">
+      <DependentUpon>UserControlRefTypeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlFAArmortizationList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlFAArmortizationList.Designer.cs">
+      <DependentUpon>UserControlFAArmortizationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlSUDecrementList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlSUDecrementList.Designer.cs">
+      <DependentUpon>UserControlSUDecrementList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlSUIncrementList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlSUIncrementList.Designer.cs">
+      <DependentUpon>UserControlSUIncrementList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlOpeningFixedAssetList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlOpeningFixedAssetList.Designer.cs">
+      <DependentUpon>UserControlOpeningFixedAssetList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlOpeningInventoryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlOpeningInventoryList.Designer.cs">
+      <DependentUpon>UserControlOpeningInventoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlAccountTranferVoucherList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlAccountTranferVoucherList.Designer.cs">
+      <DependentUpon>UserControlAccountTranferVoucherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlOpeningAccountEntryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlOpeningAccountEntryList.Designer.cs">
+      <DependentUpon>UserControlOpeningAccountEntryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlPayItemList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlPayItemList.Designer.cs">
+      <DependentUpon>UserControlPayItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlPlanTemplateList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlPlanTemplateList.Designer.cs">
+      <DependentUpon>UserControlPlanTemplateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlProjectList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlProjectList.Designer.cs">
+      <DependentUpon>UserControlProjectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlStockList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlStockList.Designer.cs">
+      <DependentUpon>UserControlStockList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlVendorList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlVendorList.Designer.cs">
+      <DependentUpon>UserControlVendorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlVoucherList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Dictionary\UserControlVoucherList.Designer.cs">
+      <DependentUpon>UserControlVoucherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlTransferVoucherList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlTransferVoucherList.Designer.cs">
+      <DependentUpon>UserControlTransferVoucherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlFADecrementList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlFADecrementList.Designer.cs">
+      <DependentUpon>UserControlFADecrementList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlFAIncrementList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlFAIncrementList.Designer.cs">
+      <DependentUpon>UserControlFAIncrementList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlGeneralVoucherCapitalAllocateList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlGeneralVoucherCapitalAllocateList.Designer.cs">
+      <DependentUpon>UserControlGeneralVoucherCapitalAllocateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlGeneralVoucherList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlGeneralVoucherList.Designer.cs">
+      <DependentUpon>UserControlGeneralVoucherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlInputInventoryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlInputInventoryList.Designer.cs">
+      <DependentUpon>UserControlInputInventoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlOutputInventoryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlOutputInventoryList.Designer.cs">
+      <DependentUpon>UserControlOutputInventoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlPaymentDepositList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlPaymentDepositList.Designer.cs">
+      <DependentUpon>UserControlPaymentDepositList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlPaymentEstimateList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlPaymentEstimateList.Designer.cs">
+      <DependentUpon>UserControlPaymentEstimateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlPaymentVoucherList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlPaymentVoucherList.Designer.cs">
+      <DependentUpon>UserControlPaymentVoucherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlReceiptDepositList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlReceiptDepositList.Designer.cs">
+      <DependentUpon>UserControlReceiptDepositList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlReceiptEstimateList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlReceiptEstimateList.Designer.cs">
+      <DependentUpon>UserControlReceiptEstimateList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlSalaryList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlSalaryList.Designer.cs">
+      <DependentUpon>UserControlSalaryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlVoucherReceiptList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\Voucher\UserControlVoucherReceiptList.Designer.cs">
+      <DependentUpon>UserControlVoucherReceiptList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWaitForm.Designer.cs">
+      <DependentUpon>FrmWaitForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseUserControls\BaseVoucherListDetail.resx">
+      <DependentUpon>BaseVoucherListDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUserControls\BaseVoucherListUserControl.resx">
+      <DependentUpon>BaseVoucherListUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommonControl\MainPanelControl.resx">
+      <DependentUpon>MainPanelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase\FrmXtraBaseCategoryDetail.resx">
+      <DependentUpon>FrmXtraBaseCategoryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase\FrmXtraBaseTreeDetail.resx">
+      <DependentUpon>FrmXtraBaseTreeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase\FrmXtraBaseVoucherDetail.resx">
+      <DependentUpon>FrmXtraBaseVoucherDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmOpeningSupplyEntries.resx">
+      <DependentUpon>FrmOpeningSupplyEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmOpeningSupplyEntryDetail.resx">
+      <DependentUpon>FrmOpeningSupplyEntryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraSalaryPostedVoucher.resx">
+      <DependentUpon>FrmXtraSalaryPostedVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraOpeningFixedAssetEntryDetail.resx">
+      <DependentUpon>FrmXtraOpeningFixedAssetEntryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraOpeningInventoryEntryDetail.resx">
+      <DependentUpon>FrmXtraOpeningInventoryEntryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraAccountTranferVoucherDetail.resx">
+      <DependentUpon>FrmXtraAccountTranferVoucherDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraOpeningAccountEntryDetail.resx">
+      <DependentUpon>FrmXtraOpeningAccountEntryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraPrintVoucherByLot.resx">
+      <DependentUpon>FrmXtraPrintVoucherByLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraReceiptEstimateDetail.resx">
+      <DependentUpon>FrmXtraReceiptEstimateDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraSalaryVoucher.resx">
+      <DependentUpon>FrmXtraSalaryVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraSearchVoucher.resx">
+      <DependentUpon>FrmXtraSearchVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraSUDecrementDetail.resx">
+      <DependentUpon>FrmXtraSUDecrementDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraSUIncrementDetail.resx">
+      <DependentUpon>FrmXtraSUIncrementDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraTransferVoucherDetail.resx">
+      <DependentUpon>FrmXtraTransferVoucherDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraFormFAIncrementDetail.resx">
+      <DependentUpon>FrmXtraFormFAIncrementDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraFormFAArmortizationDetail.resx">
+      <DependentUpon>FrmXtraFormFAArmortizationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraFormFADecrementDetail.resx">
+      <DependentUpon>FrmXtraFormFADecrementDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraFormPaymentVoucherDetail.resx">
+      <DependentUpon>FrmXtraFormPaymentVoucherDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraGeneralVoucherDetail.resx">
+      <DependentUpon>FrmXtraGeneralVoucherDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraGenvervoucherCapitalAllocateDetail.resx">
+      <DependentUpon>FrmXtraGenvervoucherCapitalAllocateDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraInputInventoryDetail.resx">
+      <DependentUpon>FrmXtraInputInventoryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraOutputInventoryDetail.resx">
+      <DependentUpon>FrmXtraOutputInventoryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraPaymentDepositDetail.resx">
+      <DependentUpon>FrmXtraPaymentDepositDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraPaymentEstimateDetail.resx">
+      <DependentUpon>FrmXtraPaymentEstimateDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraReCalOutputInventory.resx">
+      <DependentUpon>FrmXtraReCalOutputInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraReceiptDepositDetail.resx">
+      <DependentUpon>FrmXtraReceiptDepositDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraSalary.resx">
+      <DependentUpon>FrmXtraSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraShowVoucherForSalary.resx">
+      <DependentUpon>FrmXtraShowVoucherForSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraUpdateAmountExchange.resx">
+      <DependentUpon>FrmXtraUpdateAmountExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusiness\FrmXtraVoucherReceiptDetail.resx">
+      <DependentUpon>FrmXtraVoucherReceiptDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraActivityDetail.resx">
+      <DependentUpon>FrmXtraActivityDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraAutoBusinessDetail.resx">
+      <DependentUpon>FrmXtraAutoBusinessDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraAutoBusinessParallelDetail.resx">
+      <DependentUpon>FrmXtraAutoBusinessParallelDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraExchangeRateDetail.resx">
+      <DependentUpon>FrmXtraExchangeRateDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraAccountTranferDetail.resx">
+      <DependentUpon>FrmXtraAccountTranferDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraBankDetail.resx">
+      <DependentUpon>FrmXtraBankDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraBudgetSourceCategoryDetail.resx">
+      <DependentUpon>FrmXtraBudgetSourceCategoryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraBuildingDetail.resx">
+      <DependentUpon>FrmXtraBuildingDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraCapitalAllocateDetail.resx">
+      <DependentUpon>FrmXtraCapitalAllocateDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraAccountCategoryDetail.resx">
+      <DependentUpon>FrmXtraAccountCategoryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraAccountingObjectDetail.resx">
+      <DependentUpon>FrmXtraAccountingObjectDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraBudgetCategoryDetail.resx">
+      <DependentUpon>FrmXtraBudgetCategoryDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraBudgetChapterDetail.resx">
+      <DependentUpon>FrmXtraBudgetChapterDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmxtraBudgetItemDetail.resx">
+      <DependentUpon>FrmxtraBudgetItemDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraAccountDetail.resx">
+      <DependentUpon>FrmXtraAccountDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraBudgetSourceDetail.resx">
+      <DependentUpon>FrmXtraBudgetSourceDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraCompanyProfileDetail.resx">
+      <DependentUpon>FrmXtraCompanyProfileDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraCurrencyDetail.resx">
+      <DependentUpon>FrmXtraCurrencyDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraCustomerDetail.resx">
+      <DependentUpon>FrmXtraCustomerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraDepartmentDetail.resx">
+      <DependentUpon>FrmXtraDepartmentDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraEmployeeContractDetail.resx">
+      <DependentUpon>FrmXtraEmployeeContractDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraEmployeeDetail.resx">
+      <DependentUpon>FrmXtraEmployeeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraEmployeeLeasingDetail.resx">
+      <DependentUpon>FrmXtraEmployeeLeasingDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraFixedAssetCategoryTreeDetail.resx">
+      <DependentUpon>FrmXtraFixedAssetCategoryTreeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraFixedAssetDetail.resx">
+      <DependentUpon>FrmXtraFixedAssetDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraMutualDetail.resx">
+      <DependentUpon>FrmXtraMutualDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraProjectDetail.resx">
+      <DependentUpon>FrmXtraProjectDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraRefTypeDetail.resx">
+      <DependentUpon>FrmXtraRefTypeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmCreateNewDatabase.resx">
+      <DependentUpon>FrmCreateNewDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmUnlockBook.resx">
+      <DependentUpon>FrmUnlockBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraAuditingLog.resx">
+      <DependentUpon>FrmXtraAuditingLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraBackUpData.resx">
+      <DependentUpon>FrmXtraBackUpData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraChangePassword.resx">
+      <DependentUpon>FrmXtraChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraConvertFoxproData.resx">
+      <DependentUpon>FrmXtraConvertFoxproData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraDbInfo.resx">
+      <DependentUpon>FrmXtraDbInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraDbOption.resx">
+      <DependentUpon>FrmXtraDbOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraGetBudgetItemList.resx">
+      <DependentUpon>FrmXtraGetBudgetItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraInventoryItemDetail.resx">
+      <DependentUpon>FrmXtraInventoryItemDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraMergerFundDetail.resx">
+      <DependentUpon>FrmXtraMergerFundDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraPayItemDetail.resx">
+      <DependentUpon>FrmXtraPayItemDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraPlanTemplateItem.resx">
+      <DependentUpon>FrmXtraPlanTemplateItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraStockDetail.resx">
+      <DependentUpon>FrmXtraStockDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraVendorDetail.resx">
+      <DependentUpon>FrmXtraVendorDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDictionary\FrmXtraVoucherListDetail.resx">
+      <DependentUpon>FrmXtraVoucherListDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraExportData.resx">
+      <DependentUpon>FrmXtraExportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraOpenDatabase.resx">
+      <DependentUpon>FrmXtraOpenDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraPostedDate.resx">
+      <DependentUpon>FrmXtraPostedDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraRegister.resx">
+      <DependentUpon>FrmXtraRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraRestoreData.resx">
+      <DependentUpon>FrmXtraRestoreData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\FrmXtraUpdateDatabase.resx">
+      <DependentUpon>FrmXtraUpdateDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\UserProfile\FrmUserProfileDetail.resx">
+      <DependentUpon>FrmUserProfileDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\UserProfile\UserControlUserProfileList.resx">
+      <DependentUpon>UserControlUserProfileList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystem\XtraAboutForm.resx">
+      <DependentUpon>XtraAboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainRibbonForm.resx">
+      <DependentUpon>MainRibbonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources\en-Eg.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>en-Eg.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\vi-Vn.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>vi-Vn1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUserControls\BaseListUserControl.resx">
+      <DependentUpon>BaseListUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseUserControls\BaseTreeListUserControl.resx">
+      <DependentUpon>BaseTreeListUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DiagramDesktop\UserControlCashDesktop.resx">
+      <DependentUpon>UserControlCashDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DiagramDesktop\UserControlDepositDesktop.resx">
+      <DependentUpon>UserControlDepositDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DiagramDesktop\UserControlEstimateDesktop.resx">
+      <DependentUpon>UserControlEstimateDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DiagramDesktop\UserControlFixedAssetDesktop.resx">
+      <DependentUpon>UserControlFixedAssetDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DiagramDesktop\UserControlGeneralDesktop.resx">
+      <DependentUpon>UserControlGeneralDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DiagramDesktop\UserControlInventoryDesktop.resx">
+      <DependentUpon>UserControlInventoryDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\DiagramDesktop\UserControlSalaryDesktop.resx">
+      <DependentUpon>UserControlSalaryDesktop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\FrmAccountList.resx">
+      <DependentUpon>FrmAccountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlExchangeRateList.resx">
+      <DependentUpon>UserControlExchangeRateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlAccountTranferList.resx">
+      <DependentUpon>UserControlAccountTranferList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlAudittingLogList.resx">
+      <DependentUpon>UserControlAudittingLogList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlAutoBusinessList.resx">
+      <DependentUpon>UserControlAutoBusinessList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlBankList.resx">
+      <DependentUpon>UserControlBankList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlBudgetSourceCategoryList.resx">
+      <DependentUpon>UserControlBudgetSourceCategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlMutualList.resx">
+      <DependentUpon>UserControlMutualList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlBuildingList.resx">
+      <DependentUpon>UserControlBuildingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlCapitalAllocateList.resx">
+      <DependentUpon>UserControlCapitalAllocateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlAccountCategoryList.resx">
+      <DependentUpon>UserControlAccountCategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlAccountingObjectList.resx">
+      <DependentUpon>UserControlAccountingObjectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlAccountList.resx">
+      <DependentUpon>UserControlAccountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlBudgetCategoryList.resx">
+      <DependentUpon>UserControlBudgetCategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlBudgetChapterList.resx">
+      <DependentUpon>UserControlBudgetChapterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlBudgetItemList.resx">
+      <DependentUpon>UserControlBudgetItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlBudgetSourceList.resx">
+      <DependentUpon>UserControlBudgetSourceList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlCurrencyList.resx">
+      <DependentUpon>UserControlCurrencyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlCustomerList.resx">
+      <DependentUpon>UserControlCustomerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlDepartmentList.resx">
+      <DependentUpon>UserControlDepartmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlEmployeeContractList.resx">
+      <DependentUpon>UserControlEmployeeContractList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlEmployeeLeasingList.resx">
+      <DependentUpon>UserControlEmployeeLeasingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlEmployeeList.resx">
+      <DependentUpon>UserControlEmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlFixedAssetCategoryTreeList.resx">
+      <DependentUpon>UserControlFixedAssetCategoryTreeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlFixedAssetList.resx">
+      <DependentUpon>UserControlFixedAssetList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlInventoryItemList.resx">
+      <DependentUpon>UserControlInventoryItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlMergerFundList.resx">
+      <DependentUpon>UserControlMergerFundList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlRefTypeList.resx">
+      <DependentUpon>UserControlRefTypeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlFAArmortizationList.resx">
+      <DependentUpon>UserControlFAArmortizationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlOpeningFixedAssetList.resx">
+      <DependentUpon>UserControlOpeningFixedAssetList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlOpeningInventoryList.resx">
+      <DependentUpon>UserControlOpeningInventoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlAccountTranferVoucherList.resx">
+      <DependentUpon>UserControlAccountTranferVoucherList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlOpeningAccountEntryList.resx">
+      <DependentUpon>UserControlOpeningAccountEntryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlPayItemList.resx">
+      <DependentUpon>UserControlPayItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlPlanTemplateList.resx">
+      <DependentUpon>UserControlPlanTemplateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlProjectList.resx">
+      <DependentUpon>UserControlProjectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlStockList.resx">
+      <DependentUpon>UserControlStockList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlVendorList.resx">
+      <DependentUpon>UserControlVendorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Dictionary\UserControlVoucherList.resx">
+      <DependentUpon>UserControlVoucherList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlSUDecrementList.resx">
+      <DependentUpon>UserControlSUDecrementList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlTransferVoucherList.resx">
+      <DependentUpon>UserControlTransferVoucherList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlFADecrementList.resx">
+      <DependentUpon>UserControlFADecrementList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlFAIncrementList.resx">
+      <DependentUpon>UserControlFAIncrementList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlGeneralVoucherCapitalAllocateList.resx">
+      <DependentUpon>UserControlGeneralVoucherCapitalAllocateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlGeneralVoucherList.resx">
+      <DependentUpon>UserControlGeneralVoucherList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlInputInventoryList.resx">
+      <DependentUpon>UserControlInputInventoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlOutputInventoryList.resx">
+      <DependentUpon>UserControlOutputInventoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlPaymentDepositList.resx">
+      <DependentUpon>UserControlPaymentDepositList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlPaymentEstimateList.resx">
+      <DependentUpon>UserControlPaymentEstimateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlPaymentVoucherList.resx">
+      <DependentUpon>UserControlPaymentVoucherList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlReceiptDepositList.resx">
+      <DependentUpon>UserControlReceiptDepositList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlReceiptEstimateList.resx">
+      <DependentUpon>UserControlReceiptEstimateList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlSalaryList.resx">
+      <DependentUpon>UserControlSalaryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\Voucher\UserControlVoucherReceiptList.resx">
+      <DependentUpon>UserControlVoucherReceiptList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWaitForm.resx">
+      <DependentUpon>FrmWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="bin\Report\A02LDTL.rst" />
+    <None Include="bin\Report\A02LDTLRETAIL.rst" />
+    <None Include="bin\Report\A501A.rst" />
+    <None Include="bin\Report\AccountCategoryList.rst" />
+    <None Include="bin\Report\AccountingObjectList.rst" />
+    <None Include="bin\Report\AccountingVoucher.rst" />
+    <None Include="bin\Report\AccountList.rst" />
+    <None Include="bin\Report\AccountTranferList.rst" />
+    <None Include="bin\Report\ActivityReportB02.rst" />
+    <None Include="bin\Report\AdvancePayment.rst" />
+    <None Include="bin\Report\AllocateFormulaList.rst" />
+    <None Include="bin\Report\AutoBusinessList.rst" />
+    <None Include="bin\Report\B01BCQT.rst" />
+    <None Include="bin\Report\B01H.rst" />
+    <None Include="bin\Report\B03BNG.rst" />
+    <None Include="bin\Report\B09_BNG.rst" />
+    <None Include="bin\Report\B14Q.rst" />
+    <None Include="bin\Report\BankList.rst" />
+    <None Include="bin\Report\BudgetCategoryList - Copy.rst" />
+    <None Include="bin\Report\BudgetCategoryList.rst" />
+    <None Include="bin\Report\BudgetChapterList.rst" />
+    <None Include="bin\Report\BudgetItemList.rst" />
+    <None Include="bin\Report\BudgetKindItemList.rst" />
+    <None Include="bin\Report\BudgetSourceList.rst" />
+    <None Include="bin\Report\C11H.rst" />
+    <None Include="bin\Report\C12H.rst" />
+    <None Include="bin\Report\C22H.rst" />
+    <None Include="bin\Report\C30BB.rst" />
+    <None Include="bin\Report\CaptitalAllocateVoucherList.rst" />
+    <None Include="bin\Report\CashS11AH.rst" />
+    <None Include="bin\Report\CashS11H.rst" />
+    <None Include="bin\Report\CashS12AH.rst" />
+    <None Include="bin\Report\CashS12H.rst" />
+    <None Include="bin\Report\CcyList.rst" />
+    <None Include="bin\Report\CompanyList.rst" />
+    <None Include="bin\Report\CompanyProfiles.rst" />
+    <None Include="bin\Report\CurrencyList.rst" />
+    <None Include="bin\Report\CustomerList.rst" />
+    <None Include="bin\Report\DepartmentList.rst" />
+    <None Include="bin\Report\EmployeeList.rst" />
+    <None Include="bin\Report\EstimateDetailStatements.rst" />
+    <None Include="bin\Report\F03_BNG.rst" />
+    <None Include="bin\Report\F03_BNG_NO_PROJECT.rst" />
+    <None Include="bin\Report\F331_BNG.rst" />
+    <None Include="bin\Report\FinacialB03bBCTC.rst" />
+    <None Include="bin\Report\FixedAsset30KPart2.rst" />
+    <None Include="bin\Report\FixedAssetB0130KPart2.rst" />
+    <None Include="bin\Report\FixedAssetB01A.rst" />
+    <None Include="bin\Report\FixedAssetB02.rst" />
+    <None Include="bin\Report\FixedAssetB03H.rst" />
+    <None Include="bin\Report\FixedAssetB03H30K.rst" />
+    <None Include="bin\Report\FixedAssetC55aHD.rst" />
+    <None Include="bin\Report\FixedAssetC55aHD1.rst" />
+    <None Include="bin\Report\FixedAssetCard.rst" />
+    <None Include="bin\Report\FixedAssetCategoryList.rst" />
+    <None Include="bin\Report\FixedAssetFAB01Car.rst" />
+    <None Include="bin\Report\FixedAssetFAB01House.rst" />
+    <None Include="bin\Report\FixedAssetFAInventory.rst" />
+    <None Include="bin\Report\FixedAssetFAInventory3000.rst" />
+    <None Include="bin\Report\FixedAssetFAInventoryCar.rst" />
+    <None Include="bin\Report\FixedAssetFAInventoryHouse.rst" />
+    <None Include="bin\Report\FixedAssetList.rst" />
+    <None Include="bin\Report\FixedAssetS24H.rst" />
+    <None Include="bin\Report\FixedAssetS26H.rst" />
+    <None Include="bin\Report\FixedAssetS31H.rst" />
+    <None Include="bin\Report\FundStuation.rst" />
+    <None Include="bin\Report\GeneralEstimate.rst" />
+    <None Include="bin\Report\GeneralPaymentDetailEstimate.rst" />
+    <None Include="bin\Report\GeneralPaymentEstimate.rst" />
+    <None Include="bin\Report\GeneralReceiptEstimate.rst" />
+    <None Include="bin\Report\InventoryItemList.rst" />
+    <None Include="bin\Report\MergerFundList.rst" />
+    <None Include="bin\Report\PayItemList.rst" />
+    <None Include="bin\Report\PlanTemplateListList.rst" />
+    <None Include="bin\Report\ProjectList.rst" />
+    <None Include="bin\Report\ReportB01BCTC.rst" />
+    <None Include="bin\Report\ReportB01CI.rst" />
+    <None Include="bin\Report\ReportB01CII.rst" />
+    <None Include="bin\Report\ReportB04BCTC.rst" />
+    <None Include="bin\Report\ReportF03BCT.rst" />
+    <None Include="bin\Report\ReportLedgerAccounting_S104H.rst" />
+    <None Include="bin\Report\ReportS104H.rst" />
+    <None Include="bin\Report\S03AH.rst" />
+    <None Include="bin\Report\S03BH.rst" />
+    <None Include="bin\Report\S05H.rst" />
+    <None Include="bin\Report\S26HFixedAsset.rst" />
+    <None Include="bin\Report\S33H.rst" />
+    <None Include="bin\Report\StockList.rst" />
+    <None Include="bin\Report\Style.rss" />
+    <None Include="bin\Report\Template.rst" />
+    <None Include="bin\Report\VendorList.rst" />
+    <None Include="bin\Report\VoucherListList.rst" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TSD.AccountingSoft.Model\TSD.AccountingSoft.Model.csproj">
+      <Project>{989cf15f-35a7-4bcc-aa36-a5d010031392}</Project>
+      <Name>TSD.AccountingSoft.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSD.AccountingSoft.Presenter\TSD.AccountingSoft.Presenter.csproj">
+      <Project>{a3ce9801-e4b1-4fa7-a01f-1b3e684271c1}</Project>
+      <Name>TSD.AccountingSoft.Presenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSD.AccountingSoft.Report\TSD.AccountingSoft.Report.csproj">
+      <Project>{2f8805f5-08e8-4bc5-b5f2-3f0432f3d972}</Project>
+      <Name>TSD.AccountingSoft.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSD.AccountingSoft.Session\TSD.AccountingSoft.Session.csproj">
+      <Project>{387501bd-3dd5-4e3e-a592-00713d8fe59d}</Project>
+      <Name>TSD.AccountingSoft.Session</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSD.AccountingSoft.View\TSD.AccountingSoft.View.csproj">
+      <Project>{68c5cd05-c4e8-4184-93c2-39ce0006e115}</Project>
+      <Name>TSD.AccountingSoft.View</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSD.Enum\TSD.Enum.csproj">
+      <Project>{923f1acb-893f-4d65-b2bf-8bb2bcb10d30}</Project>
+      <Name>TSD.Enum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSD.Option\TSD.Option.csproj">
+      <Project>{00fa8732-696a-4f1d-871d-e046c475e18d}</Project>
+      <Name>TSD.Option</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_banknote-arrow_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit_card_front-arrow_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credit_card_front-arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_banknote-arrow_left1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_banknote-arrow_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\order-print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DaTinh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="main.ico" />
+    <Content Include="Resources\icon-hoat-dong-su-nghiep.png" />
+    <Content Include="Resources\icon-nhan-ban.png" />
+    <Content Include="Resources\icon-so-du-dau-ki.png" />
+    <Content Include="Resources\icon-tai-khoan-ngam-dinh.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\Close.png" />
+    <None Include="Resources\Untitled2.png" />
+    <None Include="Resources\Untitled1.png" />
+    <None Include="Resources\filter1.png" />
+    <None Include="Resources\filter.png" />
+    <None Include="Resources\COPYRIGHT-NO2.jpg" />
+    <None Include="Resources\GIOI-THIEU-CHUONG-TRINH.jpg" />
+    <None Include="Resources\COPYRIGHT.jpg" />
+    <None Include="Resources\BAO-CAO.png" />
+    <None Include="Resources\DIEU-CHINH.png" />
+    <None Include="Resources\KHAU-HAO.png" />
+    <None Include="Resources\GHI-GIAM.png" />
+    <None Include="Resources\GHI-TANG.png" />
+    <None Include="Resources\CHUNG-TU.png" />
+    <None Include="Resources\TSCÐ.png" />
+    <None Include="Resources\SO-DO-PHAN-HANH-TSCD.jpg" />
+    <None Include="Resources\TAI-SAN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9318EE7F-35D4-4ECC-9A23-321500AB0DE7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TSD.AccountingSoft.DataAccess</RootNamespace>
+    <AssemblyName>TSD.AccountingSoft.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v12.2.Core, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v12.2, Version=12.2.8.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DaoFactories.cs" />
+    <Compile Include="IDaoFactory.cs" />
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="IEntitiesDao\Cash\IGeneralLedgerDao.cs" />
+    <Compile Include="IEntitiesDao\Cash\ICashDao.cs" />
+    <Compile Include="IEntitiesDao\Cash\ICashDetailDao.cs" />
+    <Compile Include="IEntitiesDao\Cash\IReceiptVoucherDao.cs" />
+    <Compile Include="IEntitiesDao\Cash\IReceiptVoucherDetailDao.cs" />
+    <Compile Include="IEntitiesDao\DaoBase.cs" />
+    <Compile Include="IEntitiesDao\Deposit\IDepositDetailParallelDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IAccountingObjectCategoryDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IActivityDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IAutoBusinessParallelDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IExchangeRateDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IAutoNumberListDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IFixedAssetAccessaryDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IMutualDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\ICalculateClosingDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\ICompanyProfileDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IBudgetSourceCategoryDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IBuildingDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IEmployeeLeasingDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IElectricalWorkDao.cs" />
+    <Compile Include="IEntitiesDao\Estimate\IEstimateDetailStatementDao.cs" />
+    <Compile Include="IEntitiesDao\Estimate\IEstimateDetailStatementFixedAssetDao.cs" />
+    <Compile Include="IEntitiesDao\Estimate\IEstimateDetailStatementPartBDao.cs" />
+    <Compile Include="IEntitiesDao\FixedAsset\IFixedAssetDecrementDetailParallelDao.cs" />
+    <Compile Include="IEntitiesDao\FixedAsset\IFixedAssetIncrementDetailParallelDao.cs" />
+    <Compile Include="IEntitiesDao\General\IAccountTranferVourcherDao.cs" />
+    <Compile Include="IEntitiesDao\General\IEstimateExchangeRateDao.cs" />
+    <Compile Include="IEntitiesDao\ICommonDao.cs" />
+    <Compile Include="IEntitiesDao\Deposit\IDepositDao.cs" />
+    <Compile Include="IEntitiesDao\Deposit\IDepositDetailDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IAccountTranferDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IAudittingLogDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IAutoBusinessDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IBankDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\ICapitalAllocateDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\ICurrencyDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IAccountCategoryDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IAccountDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IAutoNumberDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IBudgetCategoryDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IBudgetChapterDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IBudgetItemDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IBudgetSourceDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IBudgetSourcePropertyDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\ICustomerDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IDBOptionDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IDepartmentDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IEmployeeDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IEmployeePayItemDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IFixedAssetCurrencyDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IFixedAssetDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IFixedAssetCategoryDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IInventoryItemDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IMergerFundyDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IPayItemDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IPlanTemplateItemDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IPlanTemplateListDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IProjectDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IRefTypeDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IStockDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IVendorDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IAccountingObjectDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IVoucherListDao.cs" />
+    <Compile Include="IEntitiesDao\Estimate\IEstimateDetailDao.cs" />
+    <Compile Include="IEntitiesDao\Estimate\IEstimateDao.cs" />
+    <Compile Include="IEntitiesDao\FixedAsset\IFixedAssetArmortizationDao.cs" />
+    <Compile Include="IEntitiesDao\FixedAsset\IFixedAssetArmortizationDetailDao.cs" />
+    <Compile Include="IEntitiesDao\FixedAsset\IFixedAssetDecrementDao.cs" />
+    <Compile Include="IEntitiesDao\FixedAsset\IFixedAssetDecrementDetailDao.cs" />
+    <Compile Include="IEntitiesDao\FixedAsset\IFixedAssetIncrementDao.cs" />
+    <Compile Include="IEntitiesDao\FixedAsset\IFixedAssetIncrementDetailDao.cs" />
+    <Compile Include="IEntitiesDao\FixedAsset\IFixedAssetLedgerDao.cs" />
+    <Compile Include="IEntitiesDao\FixedAsset\IFixedAssetVoucherDao.cs" />
+    <Compile Include="IEntitiesDao\General\ICaptitalAllocateVoucherDao.cs" />
+    <Compile Include="IEntitiesDao\General\IGeneralDao.cs" />
+    <Compile Include="IEntitiesDao\General\IGeneralDetail.cs" />
+    <Compile Include="IEntitiesDao\IAccountBalanceDao.cs" />
+    <Compile Include="IEntitiesDao\IJournalEntryAccountDao.cs" />
+    <Compile Include="IEntitiesDao\Dictionary\IVoucherTypeDao.cs" />
+    <Compile Include="IEntitiesDao\Inventory\IItemTransactionDao.cs" />
+    <Compile Include="IEntitiesDao\Inventory\IItemTransactionDetailDao.cs" />
+    <Compile Include="IEntitiesDao\Inventory\IItemTransactionDetailParallelDao.cs" />
+    <Compile Include="IEntitiesDao\ISupplyLedgerDao.cs" />
+    <Compile Include="IEntitiesDao\Opening\IOpeningInventoryEntryDao.cs" />
+    <Compile Include="IEntitiesDao\Opening\IOpeningAccountEntryDao.cs" />
+    <Compile Include="IEntitiesDao\Opening\IOpeningAccountEntryDetailDao.cs" />
+    <Compile Include="IEntitiesDao\Opening\IOpeningFixedAssetEntryDao.cs" />
+    <Compile Include="IEntitiesDao\Opening\IOpeningSupplyEntryDao.cs" />
+    <Compile Include="IEntitiesDao\Report\IFixedAssetHousingReportDao.cs" />
+    <Compile Include="IEntitiesDao\Report\IReportDataTemplateDao.cs" />
+    <Compile Include="IEntitiesDao\Report\IReportGroupDao.cs" />
+    <Compile Include="IEntitiesDao\Report\IReportListDao.cs" />
+    <Compile Include="IEntitiesDao\Salary\ISalaryDao.cs" />
+    <Compile Include="IEntitiesDao\Salary\ISalaryVoucherDao.cs" />
+    <Compile Include="IEntitiesDao\Search\ISearchDao.cs" />
+    <Compile Include="IEntitiesDao\System\ILockDao.cs" />
+    <Compile Include="IEntitiesDao\System\IPermissionDao.cs" />
+    <Compile Include="IEntitiesDao\System\IPermissionSiteDao.cs" />
+    <Compile Include="IEntitiesDao\System\IRoleDao.cs" />
+    <Compile Include="IEntitiesDao\System\IRoleSiteDao.cs" />
+    <Compile Include="IEntitiesDao\System\ISiteDao.cs" />
+    <Compile Include="IEntitiesDao\System\IUserProfileDao.cs" />
+    <Compile Include="IEntitiesDao\Tool\ISUIncrementDecrementDao.cs" />
+    <Compile Include="IEntitiesDao\Tool\ISUIncrementDecrementDetailDao.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServer\Cash\SqlServerCashDetailDao.cs" />
+    <Compile Include="SqlServer\Cash\SqlServerCashDao.cs" />
+    <Compile Include="SqlServer\Cash\SqlServerGeneralLedgerDao.cs" />
+    <Compile Include="SqlServer\Deposit\SqlServerDepositDao.cs" />
+    <Compile Include="SqlServer\Deposit\SqlServerDepositDetailDao.cs" />
+    <Compile Include="SqlServer\Deposit\SqlServerDepositDetailParallelDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerFixedAssetAccessaryDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerAccountingObjectCategoryDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerActivityDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerAutoBusinessParallelDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerExchangeRateDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerAutoNumberListDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerMutualDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerCalculateClosingDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerCompanyProfileDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerAccountTranferDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerAudittingLogDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerAutoBusinessDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerBankDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerBudgetSourceCategoryDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerBuildingDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerCapitalAllocateDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerCurrencyDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerAccountCategoryDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerAccountDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerAutoNumberDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerBudgetCategoryDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerBudgetChapterDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerBudgetItemDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerBudgetSourceDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerBudgetSourcePropertyDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerCustomerDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerDBOptionDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerDepartmentDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerEmployeeDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerEmployeeLeasingDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerEmployeePayItemDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerFixedAssetCategoryDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerFixedAssetCurrencyDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerFixedAssetDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerInventoryItemDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerAccountingObjectDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerMergerFundDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerPayItemDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerPlanTemplateItemDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerPlanTemplateListDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerProjectDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerRefTypeDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlserverElectricalWorkDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlserverStockDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerVendorDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerVoucherListDao.cs" />
+    <Compile Include="SqlServer\Estimate\SqlServerEstimateDetailStatementDao.cs" />
+    <Compile Include="SqlServer\Estimate\SqlServerEstimateDao.cs" />
+    <Compile Include="SqlServer\Estimate\SqlServerEstimateDetailDao.cs" />
+    <Compile Include="SqlServer\Estimate\SqlServerEstimateDetailStatementFixedAssetDao.cs" />
+    <Compile Include="SqlServer\Estimate\SqlServerEstimateDetailStatementPartBDao.cs" />
+    <Compile Include="SqlServer\FixedAsset\SqlServerFixedAssetArmortizationDao.cs" />
+    <Compile Include="SqlServer\FixedAsset\SqlServerFixedAssetArmortizationDetailDao.cs" />
+    <Compile Include="SqlServer\FixedAsset\SqlServerFixedAssetDecrementDao.cs" />
+    <Compile Include="SqlServer\FixedAsset\SqlServerFixedAssetDecrementDetailDao.cs" />
+    <Compile Include="SqlServer\FixedAsset\SqlServerFixedAssetDecrementDetailParallelDao.cs" />
+    <Compile Include="SqlServer\FixedAsset\SqlServerFixedAssetIncrementDao.cs" />
+    <Compile Include="SqlServer\FixedAsset\SqlServerFixedAssetIncrementDetailDao.cs" />
+    <Compile Include="SqlServer\FixedAsset\SqlServerFixedAssetIncrementDetailParallelDao.cs" />
+    <Compile Include="SqlServer\FixedAsset\SqlServerFixedAssetLedgerDao.cs" />
+    <Compile Include="SqlServer\FixedAsset\SqlServerFixedAssetVoucherDao.cs" />
+    <Compile Include="SqlServer\General\SqlServerAccountTranferVourcherlDao.cs" />
+    <Compile Include="SqlServer\General\SqlServerCaptitalAllocateVoucherDao.cs" />
+    <Compile Include="SqlServer\General\SqlServerEstimateExchangeRateDao.cs" />
+    <Compile Include="SqlServer\General\SqlServerGeneralDao.cs" />
+    <Compile Include="SqlServer\General\SqlServerGeneralDetailDao.cs" />
+    <Compile Include="SqlServer\Inventory\SqlServerItemTransactionDao.cs" />
+    <Compile Include="SqlServer\Inventory\SqlServerItemTransactionDetailDao.cs" />
+    <Compile Include="SqlServer\Inventory\SqlServerItemTransactionDetailParallelDao.cs" />
+    <Compile Include="SqlServer\Opening\SqlServerOpeningInventoryEntryDao.cs" />
+    <Compile Include="SqlServer\Opening\SqlServerOpeningAccountEntryDao.cs" />
+    <Compile Include="SqlServer\Opening\SqlServerOpeningAccountEntryDetailDao.cs" />
+    <Compile Include="SqlServer\Opening\SqlServerOpeningFixedAssetEntryDao.cs" />
+    <Compile Include="SqlServer\Opening\SqlServerOpeningSupplyEntryDao.cs" />
+    <Compile Include="SqlServer\Report\SqlReportDataTemplateDao.cs" />
+    <Compile Include="SqlServer\Report\SqlServerFixedAssetHousingReportDao.cs" />
+    <Compile Include="SqlServer\Report\SqlServerReportGroupDao.cs" />
+    <Compile Include="SqlServer\Report\SqlServerReportListDao.cs" />
+    <Compile Include="SqlServer\Salary\SqlServerSalaryDao.cs" />
+    <Compile Include="SqlServer\Salary\SqlServerSalaryVoucherDao.cs" />
+    <Compile Include="SqlServer\Search\SqlServerSearchDao.cs" />
+    <Compile Include="SqlServer\SqlCommonDao.cs" />
+    <Compile Include="SqlServer\SqlServerAccountBalanceDao.cs" />
+    <Compile Include="SqlServer\SqlServerDaoFactory.cs" />
+    <Compile Include="SqlServer\SqlServerJournalEntryAccountDao.cs" />
+    <Compile Include="SqlServer\Dictionary\SqlServerVoucherTypeDao.cs" />
+    <Compile Include="SqlServer\SqlServerSupplyLedgerDao.cs" />
+    <Compile Include="SqlServer\System\SqlServerLockDao.cs" />
+    <Compile Include="SqlServer\System\SqlServerPermissionDao.cs" />
+    <Compile Include="SqlServer\System\SqlServerPermissionSiteDao.cs" />
+    <Compile Include="SqlServer\System\SqlServerRoleDao.cs" />
+    <Compile Include="SqlServer\System\SqlServerRoleSiteDao.cs" />
+    <Compile Include="SqlServer\System\SqlServerSiteDao.cs" />
+    <Compile Include="SqlServer\System\SqlServerUserProfileDao.cs" />
+    <Compile Include="SqlServer\Tool\SqlServerSUIncrementDecrementDao.cs" />
+    <Compile Include="SqlServer\Tool\SqlServerSUIncrementDecrementDetailDao.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TSD.AccountingSoft.BusinessEntities\TSD.AccountingSoft.BusinessEntities.csproj">
+      <Project>{ff5c9137-6b86-43dd-99cf-a214675c72b8}</Project>
+      <Name>TSD.AccountingSoft.BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TSD.AccountingSoft.DataHelpers\TSD.AccountingSoft.DataHelpers.csproj">
+      <Project>{35aee1cc-6e66-4130-a41b-555499797ed0}</Project>
+      <Name>TSD.AccountingSoft.DataHelpers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
